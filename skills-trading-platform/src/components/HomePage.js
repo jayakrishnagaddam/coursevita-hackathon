@@ -21,17 +21,20 @@ const NavBar = () => {
 };
 
 // Hero Section Component
-const Hero = () => (
+const NaavBar = () => {
+  const navigate = useNavigate();
+  return (
   <div className="bg-gradient-to-b from-indigo-100 to-white py-20">
     <div className="container mx-auto text-center">
       <h1 className="text-5xl font-bold mb-6 text-indigo-800">Unlock Your Potential with SkillSwap</h1>
       <p className="text-xl mb-8 text-gray-600">Share your expertise, learn new skills, and grow together</p>
-      <button className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition duration-300">
+      <button onClick={() => navigate('/skills')}  className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition duration-300">
         Get Started <ArrowRight className="inline-block ml-2" size={20} />
       </button>
     </div>
   </div>
 );
+};
 
 // SearchBar Component
 const SearchBar = () => (
@@ -105,7 +108,7 @@ const PopularSkills = () => {
 const HomePage = () => (
   <div className="min-h-screen bg-gray-50">
     <NavBar />
-    <Hero />
+    <NaavBar />
     <SearchBar />
     <Features />
     <PopularSkills />

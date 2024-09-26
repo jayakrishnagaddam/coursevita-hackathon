@@ -4,12 +4,14 @@ import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import IndexPage from './components/IndexPage';
+import SkillsOverviewPage from './components/SkillsOverviewPage';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/skills" element={<SkillsOverviewPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/index" element={<IndexPage />} />
